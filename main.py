@@ -67,13 +67,21 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.prompts import ChatPromptTemplate
 import json
 
-vars = {"language": input("Target language: "), "level": "B1", "number": "5"}
-prompt = build_prompt_from_name("generate_sentences", vars)
+def run_app(vars):
 
-response = model.invoke(prompt)
+    #vars = {"language": input("Target language: "), "level": input("Difficulty level: "), "number": input("Number of questions: ")}
+    prompt = build_prompt_from_name("generate_sentences", vars)
 
-entities = json.loads(response.content)  
+    response = model.invoke(prompt)
 
-student_answers = run_quiz(entities)
+    entities = json.loads(response.content)  
 
-evaluate_answers(entities, vars, student_answers)
+    student_answers = run_quiz(entities)
+
+    evaluate_answers(entities, vars, student_answers)
+
+    return None
+
+if __name__ == "__main__":
+    vars = {"language": input("Target language: "), "level": input("Difficulty level: "), "number": input("Number of questions: ")}
+    run_app(vars)

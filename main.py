@@ -1,6 +1,10 @@
 from langchain_openai import AzureChatOpenAI
-import dotenv
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.prompts import ChatPromptTemplate
+import json
 import os
+import dotenv
+
 
 dotenv.load_dotenv()
 
@@ -62,10 +66,6 @@ def evaluate_answers(entities, vars, student_answers):
         print()
 
     return None
-
-from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_core.prompts import ChatPromptTemplate
-import json
 
 def run_app(vars):
 

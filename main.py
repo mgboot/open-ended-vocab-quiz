@@ -69,7 +69,6 @@ def evaluate_answers(entities, vars, student_answers):
 
 def run_app(vars):
 
-    #vars = {"language": input("Target language: "), "level": input("Difficulty level: "), "number": input("Number of questions: ")}
     prompt = build_prompt_from_name("generate_sentences", vars)
 
     response = model.invoke(prompt)

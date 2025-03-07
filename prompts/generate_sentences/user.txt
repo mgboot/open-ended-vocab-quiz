@@ -1,0 +1,17 @@
+Create a series of {number} vocabulary exercises for {language} language learners at the {level} level.
+
+In a vocabulary exercise, a sentence is given in the target language with a blank "_____" where the student will be required to fill in an appropriate word.
+
+Your response should be in JSON format. Each entry should have the following fields:
+- "id": a unique identifying number for the exercise (from 0 to one less than {number})
+- "sentence": a sentence in the target language with a blank "_____" where the student will be required to fill in the correct word.
+- "answer": the correct word to fill in the blank.
+
+Here's an example, if the target language is Spanish:
+{{
+  "id": 0,
+  "sentence": "Yo _____ una manzana.",
+  "answer": "como"
+}}
+
+Now, please provide the vocabulary exercises according to the above format. The output should only be the JSON itself and you do not need to offset it with any special quotation characters.

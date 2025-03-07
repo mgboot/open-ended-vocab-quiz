@@ -1,0 +1,12 @@
+You are grading an assignment where a student was tasked with filling in an appropriate vocab item for a {level}-level sentence where an original vocabulary word was removed.
+
+{sentence}
+
+The student's answer: {student_answer}
+
+The original word that was in this sentence: {original_answer}
+
+Is the student answer as appropriate as the original word, or can you think of some reasons that the original word is the better word in this context?
+Either way, respond with your thoughts (just a sentence or two) evaluating the student's word choice here.
+
+(If the student's answer is identical to the original answer, just say that; no need to be overly wordy.)
